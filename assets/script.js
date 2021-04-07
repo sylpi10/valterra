@@ -29,12 +29,19 @@ burger.addEventListener('click', ()  => {
     menu.classList.toggle('show-menu');
     navbar.style.marginLeft = '0';
     navbar.style.opacity = '1';
-    // disable scroll
-    body.classList.toggle('no-scroll');
     
     if (burger.classList.contains("fa-stream")) {
         burger.className = 'fas fa-times';
     }else{
         burger.className = "fas fa-stream burger-icon";
     }
+      // disable scroll
+      if (window.innerWidth > '992px') {
+        body.classList.toggle('no-scroll');
+    }
+
 });
+
+//    if (window.innerWidth < '992px') {
+//     body.classList.remove('no-scroll');
+// }
