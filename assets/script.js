@@ -13,3 +13,12 @@ const onScroll = () => {
 
 window.addEventListener('scroll', onScroll);
 onScroll();
+
+/*show hide menu*/
+const burger = document.querySelector('.burger-icon');
+const menu = document.querySelector('.menu');
+const nav = document.querySelector('nav');
+burger.addEventListener('click', ()  => {
+    menu.classList.toggle('show-menu');
+    nav.classList.toggle('full-nav');
+});
