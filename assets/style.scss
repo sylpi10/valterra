@@ -6,6 +6,10 @@ $basic-green: #284745;
   font-family: "america expanded";
   src: url("/assets/fonts/GT-America/GT-America-Expanded-Medium.otf");
 }
+@font-face {
+  font-family: "america expanded bold";
+  src: url("/assets/fonts/GT-America/GT-America-Expanded-Bold.otf");
+}
 /* global */
 * {
   box-sizing: border-box;
@@ -14,6 +18,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 /*imports */
