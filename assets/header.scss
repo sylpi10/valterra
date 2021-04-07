@@ -1,21 +1,21 @@
 header {
-  display: flex;
   color: #fff;
   height: 100vh;
-
+  display: flex;
   .header-title {
     background: url("img/header.jpg") no-repeat center;
     height: 100vh;
     width: 100%;
     display: flex;
     padding: 80px;
+    flex-direction: column;
+    justify-content: space-between;
     h1 {
-      margin-left: 230px;
-      margin-top: -100px;
       font-size: 2.8rem;
-      width: 350px;
       align-self: center;
       font-family: "america expanded";
+      width: 400px;
+      margin-right: 50%;
     }
     .anchors {
       align-self: flex-end;
@@ -25,7 +25,9 @@ header {
         justify-content: space-around;
         list-style-type: none;
         li {
+          margin: 12px;
           width: 30%;
+          min-width: 200px;
           border-bottom: solid 3px #fff;
           a {
             color: #fff;
@@ -33,6 +35,34 @@ header {
             &:hover {
               color: #51b364;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* reponsive 992px */
+@media screen and (max-width: 992px) {
+  header {
+    .header-title {
+      h1 {
+        font-size: 1.4rem;
+        width: 100% !important;
+        margin-left: 66%;
+        // white-space: nowrap;
+      }
+      .anchors {
+        width: 100%;
+        ul {
+          flex-direction: column;
+          width: 100%;
+          height: 140px;
+          li {
+            width: 100%;
+            font-size: 0.8rem;
+            border-bottom: solid 1px #fff;
+            margin: 4px;
           }
         }
       }
