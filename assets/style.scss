@@ -21,6 +21,14 @@ body {
   scroll-behavior: smooth;
 }
 
+a {
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    color: $second-green;
+  }
+}
+
 /*imports */
 @import "nav.scss";
 @import "header.scss";

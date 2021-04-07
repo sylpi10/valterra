@@ -1,13 +1,16 @@
-const navbar = document.querySelector('nav');
+const navbar = document.querySelector('.vertical');
+const burger = document.querySelector('.burger-icon');
 
 const onScroll = () => {
     if (window.scrollY > 300) {
         console.log(window.scrollY);
-        navbar.style.marginLeft = '-200px';
+        navbar.style.marginLeft = '-400px';
         navbar.style.opacity = '0.4';
+        burger.style.opacity = '1';
     }else{
         navbar.style.marginLeft = '0';
         navbar.style.opacity = '1';
+        // burger.style.marginLeft = '0';
     }
 }
 
@@ -15,10 +18,23 @@ window.addEventListener('scroll', onScroll);
 onScroll();
 
 /*show hide menu*/
-const burger = document.querySelector('.burger-icon');
 const menu = document.querySelector('.menu');
 const nav = document.querySelector('nav');
+const body = document.querySelector('body')
+
 burger.addEventListener('click', ()  => {
-    menu.classList.toggle('show-menu');
+    // expand nav
     nav.classList.toggle('full-nav');
+    // show menu
+    menu.classList.toggle('show-menu');
+    navbar.style.marginLeft = '0';
+    navbar.style.opacity = '1';
+    // disable scroll
+    body.classList.toggle('no-scroll');
+    
+    if (burger.classList.contains("fa-stream")) {
+        burger.className = 'fas fa-times';
+    }else{
+        burger.className = "fas fa-stream burger-icon";
+    }
 });

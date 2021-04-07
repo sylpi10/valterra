@@ -1,37 +1,54 @@
 /*aside navbar*/
 .full-nav {
   width: 100%;
+  flex-direction: row;
+  transition: all ease 0.8s;
 }
 nav {
-  background-color: $basic-green;
-  height: 90px;
+  // height: 90px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   height: 100vh;
   position: fixed;
-  z-index: 999;
   transition: all ease 0.8s;
+  z-index: 999;
   width: 10%;
+  .burger {
+    position: absolute;
+    top: 20px;
+    left: auto;
+    transition: all ease 0.8s;
+    i {
+      font-size: 2rem;
+      color: $second-green;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
+    }
+  }
   .vertical {
-    // width: 100%;
+    background-color: $basic-green;
     height: 100%;
     display: flex;
+    padding-top: 40px;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     min-width: 46px;
+    transition: all ease 0.8s;
+    // margin: auto;
     .logo {
       width: 36%;
       min-width: 34px;
     }
     img {
-      // width: 100%;
-      width: 100px;
+      width: 100%;
+      // width: 100px;
       margin: auto;
     }
-    .burger i {
-      font-size: 2rem;
-    }
+
     a {
       color: #fff;
       text-decoration: none;
@@ -68,12 +85,19 @@ nav {
   }
 }
 
-/* responsive 500px */
+/* responsive */
 
-// @media screen and (max-width: 500px) {
-//   nav .vertical .logo img {
-//   }
-// }
+@media screen and (max-width: 992px) {
+  nav .vertical {
+    width: 80px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  nav .vertical {
+    width: 46px;
+  }
+}
 
 // @media screen and (max-height: 900px) {
 //   nav {
