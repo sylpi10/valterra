@@ -10,6 +10,10 @@ $second-green: #51b364;
   font-family: "america expanded bold";
   src: url("/assets/fonts/GT-America/GT-America-Expanded-Bold.otf");
 }
+@font-face {
+  font-family: "tt norms bold";
+  src: url("/assets/fonts/TT-Norms/TTNorms-Bold.otf");
+}
 /* global */
 * {
   box-sizing: border-box;
@@ -30,7 +34,9 @@ a {
 }
 
 /*imports */
+@import "menu.scss";
 @import "nav.scss";
 @import "header.scss";
-@import "main.scss";
-@import "menu.scss";
+@import "build-solutions.scss";
+@import "knowledge.scss";
+@import "territory.scss";

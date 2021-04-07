@@ -99,6 +99,9 @@ nav .show-menu {
       height: auto;
       ul {
         list-style-type: none;
+        li {
+          margin-left: -20px;
+        }
       }
       .nav-menu {
         font-size: 1.6rem;

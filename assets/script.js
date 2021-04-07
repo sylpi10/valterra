@@ -36,9 +36,9 @@ burger.addEventListener('click', ()  => {
         burger.className = "fas fa-stream burger-icon";
     }
       // disable scroll
-      if (window.innerWidth > '992px') {
+    //   if (window.innerWidth > '992px') {
         body.classList.toggle('no-scroll');
-    }
+    // }
 
 });
 

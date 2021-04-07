@@ -1,0 +1,89 @@
+.knowledge-section {
+  background-color: #333434;
+  color: #fff;
+  h2 {
+    width: 100%;
+  }
+  .knowledge-text {
+    width: 100%;
+    .knowledge-wrapper {
+      display: flex;
+      width: 100%;
+      height: 600px;
+      justify-content: space-between;
+      padding: 0;
+      &:hover .knowledge {
+        opacity: 0.6;
+      }
+      &:hover p {
+        color: #fff;
+      }
+      .knowledge {
+        width: 23%;
+        min-width: 320px;
+        padding: 0;
+        height: 460px;
+        transition: height ease 0.4s;
+        overflow: hidden;
+        align-self: center;
+        &:hover {
+          height: 520px;
+          opacity: 1;
+        }
+
+        a,
+        img {
+          width: 100%;
+          height: 520px;
+        }
+
+        p {
+          margin-top: -140px;
+          border-left: solid 2px $second-green;
+          padding-left: 20px;
+          font-family: "tt norms bold";
+          line-height: 18px;
+          font-size: 1.2rem;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .aside-text {
+    background-color: #333434;
+    float: right;
+    width: 50%;
+    padding: 30px;
+    margin-left: auto;
+    margin-bottom: -60px;
+  }
+}
+
+@media screen and (max-width: 1580px) {
+  .knowledge-wrapper {
+    height: 800px !important;
+    .knowledge {
+      height: 380px !important;
+      p {
+        margin-top: -200px !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 790px) {
+  .knowledge-wrapper {
+    height: 1200px !important;
+    .knowledge {
+      height: 280px !important;
+      margin: auto;
+      p {
+        margin-top: -300px !important;
+      }
+    }
+  }
+  .aside-text {
+    margin: auto;
+    width: 100% !important;
+  }
+}
