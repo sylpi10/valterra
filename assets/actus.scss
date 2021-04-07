@@ -1,0 +1,80 @@
+.actuality-section {
+  display: flex;
+  .actuality-text {
+    width: 100%;
+    .actu-wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0;
+      .actu {
+        font-family: "america expanded";
+        display: flex;
+        flex-direction: column;
+        // align-items: flex-start;
+        justify-items: flex-start;
+        width: 32%;
+        margin: 5px auto;
+        min-width: 400px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        // .card-img {
+        //   padding: 0;
+        //   width: 100%;
+        //   overflow: hidden;
+        //   max-height: 300px;
+        //   height: 300px;
+        //   height: auto;
+        img {
+          width: 100%;
+          height: auto !important;
+        }
+        // }
+        .card-body {
+          padding: 30px;
+          //   width: 100%;
+          display: flex;
+          flex-direction: column;
+          //   justify-content: space-around;
+          text-align: left;
+          h3 {
+            font-size: 1.6em;
+            width: 80%;
+            // font-size: 2vw;
+          }
+          h3 > span,
+          p > span {
+            text-transform: uppercase;
+          }
+          p {
+            margin-bottom: 30px !important;
+            // width: 100%;
+          }
+          .discover-link {
+            background-color: $second-green;
+            color: #fff;
+            // width: 100%;
+            margin-top: 30px !important;
+            &:hover {
+              background-color: $basic-green;
+              border: solid 2px $basic-green;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .card-body {
+    h3 {
+      font-size: 1.2rem;
+      width: 80%;
+    }
+    p,
+    a {
+      font-size: 1rem;
+    }
+  }
+}

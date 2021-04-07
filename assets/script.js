@@ -3,7 +3,6 @@ const burger = document.querySelector('.burger-icon');
 
 const onScroll = () => {
     if (window.scrollY > 300) {
-        console.log(window.scrollY);
         navbar.style.marginLeft = '-400px';
         navbar.style.opacity = '0.4';
         burger.style.opacity = '1';

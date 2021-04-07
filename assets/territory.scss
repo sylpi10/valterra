@@ -1,3 +1,22 @@
 .territory-section {
   background: url("img/territory.jpg") no-repeat center;
+  .territory-text {
+    margin-left: auto;
+    background-color: rgba(33, 33, 33, 0.6);
+    z-index: 666;
+    color: #fff;
+    width: 60%;
+    h2 {
+      width: 100%;
+    }
+    p {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .territory-text {
+    width: 100%;
+  }
 }
