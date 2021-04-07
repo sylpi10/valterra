@@ -18,7 +18,7 @@ onScroll();
 
 /*show hide menu*/
 const menu = document.querySelector('.menu');
-const nav = document.querySelector('nav');
+const nav = document.querySelector('#header-nav');
 const body = document.querySelector('body')
 
 burger.addEventListener('click', ()  => {
