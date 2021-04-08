@@ -1,3 +1,4 @@
+/* global */
 .territory-section {
   background: url("img/territory.jpg") no-repeat center;
   .territory-text {
@@ -18,5 +19,19 @@
 @media screen and (max-width: 992px) {
   .territory-text {
     width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .territory-section {
+    h2,
+    p {
+      width: 80% !important;
+      margin: auto;
+    }
+    .discover-link {
+      width: 200px !important;
+      font-size: 1.2rem;
+      margin-left: 40px !important;
+    }
   }
 }

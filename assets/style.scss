@@ -14,6 +14,7 @@ $second-green: #51b364;
   font-family: "tt norms bold";
   src: url("/assets/fonts/TT-Norms/TTNorms-Bold.otf");
 }
+
 /* global */
 * {
   box-sizing: border-box;
@@ -30,6 +31,25 @@ a {
   text-decoration: none;
   &:hover {
     color: $second-green;
+  }
+}
+
+/* center & resize txt in all sections */
+@media screen and (max-width: 650px) {
+  section {
+    display: flex;
+    justify-content: center;
+    h2 {
+      font-size: 1.3rem !important;
+      width: 100%;
+    }
+    p {
+      font-size: 1rem !important;
+    }
+    h2,
+    p {
+      text-align: center !important;
+    }
   }
 }
 

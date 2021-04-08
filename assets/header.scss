@@ -14,6 +14,7 @@ header {
       font-size: 2.8rem;
       align-self: center;
       font-family: "america expanded";
+      font-weight: lighter;
       width: 400px;
       margin-right: 50%;
     }
@@ -24,17 +25,29 @@ header {
         display: flex;
         justify-content: space-around;
         list-style-type: none;
+        &:hover li {
+          opacity: 0.5;
+        }
         li {
           margin: 12px;
           width: 30%;
           min-width: 200px;
           border-bottom: solid 3px #fff;
+          padding-bottom: 20px;
+          transition: all 0.6s ease;
           a {
             color: #fff;
             text-decoration: none;
-            &:hover {
-              color: #51b364;
+            h4 {
+              margin-bottom: -10px;
             }
+            p {
+              font-size: 0.9rem;
+            }
+          }
+          &:hover {
+            opacity: 1;
+            border-bottom: solid 3px $second-green;
           }
         }
       }

@@ -1,23 +1,29 @@
+/* global */
 .knowledge-section {
   background-color: #333434;
   color: #fff;
   h2 {
     width: 100%;
   }
+
   .knowledge-text {
     width: 100%;
+
+    /* div wrapper of items  */
     .knowledge-wrapper {
       display: flex;
       width: 100%;
       height: 600px;
       justify-content: space-between;
       padding: 0;
+      margin: auto;
       &:hover .knowledge {
         opacity: 0.6;
       }
       &:hover p {
         color: #fff;
       }
+      /* item */
       .knowledge {
         width: 23%;
         min-width: 320px;
@@ -26,6 +32,7 @@
         transition: height ease 0.4s;
         overflow: hidden;
         align-self: center;
+        margin: auto;
         &:hover {
           height: 520px;
           opacity: 1;
@@ -36,6 +43,7 @@
           width: 100%;
           height: 520px;
         }
+        /* text hover the img */
         p {
           margin-top: -140px;
           z-index: 999;
@@ -54,9 +62,9 @@
       }
     }
   }
+  /* text on bottom right */
   .aside-text {
     background-color: #333434;
-    float: right;
     width: 60%;
     padding: 30px;
     margin-left: auto;
@@ -65,9 +73,11 @@
   }
 }
 
+/* responsive */
 @media screen and (max-width: 1580px) {
   .knowledge-wrapper {
     height: 800px !important;
+    width: 100%;
     .knowledge {
       height: 380px !important;
       p {
@@ -77,11 +87,23 @@
   }
 }
 @media screen and (max-width: 790px) {
+  .knowledge-text {
+    padding: 30px !important;
+    margin: auto;
+    h2,
+    .section-title {
+      margin: auto;
+    }
+  }
   .knowledge-wrapper {
     height: 1200px !important;
+    justify-content: center !important;
+    text-align: center;
+    align-items: center;
     .knowledge {
       height: 280px !important;
-      margin: auto;
+      margin: auto !important;
+      min-width: 260px !important;
       p {
         margin-top: -300px !important;
       }
@@ -90,5 +112,28 @@
   .aside-text {
     margin: auto;
     width: 100% !important;
+    padding-bottom: 30px !important;
+  }
+}
+@media screen and (max-width: 560px) {
+  .knowledge-section {
+    .knowledge-wrapper {
+      min-width: 300px;
+      padding: 0;
+      .knowledge {
+        margin: auto;
+        width: 100%;
+      }
+    }
+    .aside-text {
+      margin: auto !important;
+      width: 80% !important;
+      padding: 0;
+      p {
+        font-size: 0.8rem !important;
+        margin: auto;
+        width: 80%;
+      }
+    }
   }
 }

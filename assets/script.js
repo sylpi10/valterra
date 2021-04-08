@@ -1,6 +1,7 @@
 const navbar = document.querySelector('.vertical');
 const burger = document.querySelector('.burger-icon');
 
+// hide sidebar
 const onScroll = () => {
     if (window.scrollY > 300) {
         navbar.style.marginLeft = '-400px';
@@ -13,12 +14,16 @@ const onScroll = () => {
     }
 }
 
+// call when scrolling croll 
 window.addEventListener('scroll', onScroll);
+
+// call on load if already scrolled > 300
 onScroll();
+
 
 /*show hide menu*/
 const menu = document.querySelector('.menu');
-const nav = document.querySelector('#header-nav');
+const nav = document.querySelector('nav');
 const body = document.querySelector('body')
 
 burger.addEventListener('click', ()  => {
@@ -29,18 +34,13 @@ burger.addEventListener('click', ()  => {
     navbar.style.marginLeft = '0';
     navbar.style.opacity = '1';
     
+    // toggle burger icon
     if (burger.classList.contains("fa-stream")) {
         burger.className = 'fas fa-times';
     }else{
         burger.className = "fas fa-stream burger-icon";
     }
-      // disable scroll
-    //   if (window.innerWidth > '992px') {
-        body.classList.toggle('no-scroll');
-    // }
+      // disable scroll when menu shown
+    body.classList.toggle('no-scroll');
 
 });
-
-//    if (window.innerWidth < '992px') {
-//     body.classList.remove('no-scroll');
-// }
